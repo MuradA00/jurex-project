@@ -1,0 +1,39 @@
+.button {
+  --bg: rgba(var(--clr-w), 1);
+
+  background-color: var(--bg);
+  min-height: 64px;
+  clip-path: polygon(20% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 60%);
+  @include dfc;
+  text-align: center;
+  grid-gap: 12px;
+
+  padding: 0 12px;
+  min-width: 200px;
+  width: fit-content;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: clamp(14px, 1vw, 1rem);
+  &--dark {
+    color: rgba(var(--clr-w),1);
+    --bg: #1b222f;
+  }
+  &--blue {
+    --bg: #6391b7;
+    color: rgba(var(--clr-w), 1);
+  }
+  &--green {
+    --bg: #449252;
+    color: rgba(var(--clr-w), 1);
+  }
+  &--small {
+    min-height: 54px;
+    font-size: 14px;
+  }
+}
+
+@include tablet {
+  .button {
+    min-height: 54px;
+  }
+}
