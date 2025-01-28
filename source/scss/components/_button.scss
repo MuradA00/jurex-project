@@ -14,6 +14,10 @@
   text-transform: uppercase;
   font-weight: 300;
   font-size: clamp(14px, 1vw, 1rem);
+  color: rgba(var(--clr-b), 1);
+
+  transition: clip-path 300ms ease, transform 300ms 150ms ease;
+  will-change: clip-path, transform;
   &--dark {
     color: rgba(var(--clr-w),1);
     --bg: #1b222f;
@@ -29,6 +33,10 @@
   &--small {
     min-height: 54px;
     font-size: 14px;
+  }
+  @include hover {
+    clip-path:  polygon(0% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 60%);
+    transform: scale(1.05);
   }
 }
 
