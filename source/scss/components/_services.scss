@@ -46,7 +46,7 @@
       grid-gap: clamp(24px, 2.5vw, 40px);
       @include hover {
         .services-cols__image img {
-          transform: scale(1.15);
+          transform: scale(1.125);
         }
       }
     }
