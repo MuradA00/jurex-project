@@ -58,7 +58,7 @@
       display: flex;
       align-items: flex-end;
       padding: clamp(24px, 2.5vw, 40px);
-
+      overflow: hidden;
       &::after {
         @include pseudo;
         width: 100%;
@@ -91,13 +91,13 @@
       top: 0;
       left: 0;
       clip-path: var(--shape);
-
-      transition: transform 400ms ease;
-      will-change: transform;
+      filter: grayscale(1);
+      transition: all 400ms ease;
+      will-change: transform, filter;
     }
     @include hover {
       .support-col__image {
-        transform: scale(1.125);
+        transform: scale(1.125);filter: grayscale(0);
       }
     }
   }

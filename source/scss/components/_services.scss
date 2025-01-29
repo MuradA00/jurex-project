@@ -47,6 +47,7 @@
       @include hover {
         .services-cols__image img {
           transform: scale(1.125);
+          filter: grayscale(0);
         }
       }
     }
@@ -62,8 +63,9 @@
         height: 100%;
         top: 0;
         left: 0;
-        transition: transform 400ms ease;
-        will-change: transform;
+        filter: grayscale(1);
+        transition: all 400ms ease;
+        will-change: transform, filter;
       }
     }
   }
