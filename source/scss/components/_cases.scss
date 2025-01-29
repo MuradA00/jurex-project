@@ -27,6 +27,25 @@
       text-transform: uppercase;
       color: #1b222f;
       font-weight: 300;
+      &::after {
+        font-size: inherit;
+        color: inherit;
+        font-family: var(--ff);
+        display: inline-block;
+        text-transform: uppercase;
+      }
+      &--prev {
+        &::before {
+          content: "<";
+          margin-right: .5rem;
+        }
+      }
+      &--next {
+        &::after {
+          margin-left: .5rem;
+          content: ">";
+        }
+      }
     }
   }
   &-heading {
