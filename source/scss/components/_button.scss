@@ -18,6 +18,10 @@
 
   transition: clip-path 300ms ease, transform 300ms 150ms ease;
   will-change: clip-path, transform;
+
+  svg, img {
+    max-width: clamp(1.25rem, 2vw, 2rem);
+  }
   &--dark {
     color: rgba(var(--clr-w),1);
     --bg: #1b222f;

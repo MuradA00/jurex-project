@@ -91,6 +91,14 @@
       top: 0;
       left: 0;
       clip-path: var(--shape);
+
+      transition: transform 400ms ease;
+      will-change: transform;
+    }
+    @include hover {
+      .support-col__image {
+        transform: scale(1.125);
+      }
     }
   }
   &-about {
@@ -194,6 +202,9 @@
 @include mobile {
   .support {
     --about-content-w: 100%;
+    &-sections {
+      grid-gap: 5px;
+    }
     &-col {
       grid-gap: 12px;
       &__description {
